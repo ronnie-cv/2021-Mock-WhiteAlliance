@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.kinematics.DifferentialDriveKinematics;
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
  * constants. This class should not be used for any other purpose. All constants should be declared
@@ -14,13 +16,16 @@ package frc.robot;
  */
 public final class Constants {
     public static final class DriveTrainPorts {
-        public static final int LeftDriveTalonPort = 1;
-        public static final int RightDriveTalonPort = 2;
+        public static final int LeftDriveTalonPort = 2;
+        public static final int RightDriveTalonPort = 3;
     } 
     public static final class JoystickAxis {
         public static final int YAxis = 1;
     } 
-    public static final class USBOrder {
+    public static final double kTrackwidthMeters = 1;
+    public static final DifferentialDriveKinematics kDriveKinematics = new DifferentialDriveKinematics(ktrackWidthMeters);
+}
+    public final class USBOrder {
         public static final int Zero = 0;
         public static final int One = 1;
     }
